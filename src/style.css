@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    position: relative;
+
+    width: 350px;
+}
+
+.list-view {
+    padding: 25px;
+}
+
+.list__item {
+    cursor: pointer;
+}
+
+.list__item:hover,
+.list__item:focus {
+    background-color: rgba(0, 0, 0, .02);
+}
+
+.list__item:active {
+    background-color: rgba(0, 0, 0, .08);
+}
+
+.list__item:not(:last-child) {
+    border-bottom: 1px solid darkgray;
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 5px 0;
+}
+
+.person:before {
+    content: "";
+
+    display: block;
+
+    height: 50px;
+    width: 50px;
+
+    border-radius: 50%;
+
+    background: url("../img/default-img.png");
+    background-size: contain;
+}
+
+.details-view {
+    position: absolute;
+
+    padding: 25px;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background-color: white;
+}
+
+.details-view_closed {
+    display: none;
+}
+
+.details-view__user {
+    padding: 10px;
+
+    background: url("../img/background-active.jpg") no-repeat;
+    background-size: cover;
+}
+
+.details-view__exit-button {
+    order: -1;
+
+    height: 25px;
+    width: 25px;
+
+    background: url("../img/back-icon.png");
+    background-size: contain;
+
+    cursor: pointer;
+}
+
+.details-view__exit-button:hover,
+.details-view__exit-button:focus {
+    opacity: 0.4;
+}
+
+.details-view__exit-button:active {
+    opacity: 0.8;
+}
+
+.details-view__item {
+    padding: 5px 10px;
+}
+
+.details-view__title {
+    line-height: 50px;
+}
