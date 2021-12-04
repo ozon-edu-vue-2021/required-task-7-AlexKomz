@@ -122,17 +122,17 @@ const getDetailsEl = (user) => {
         {
             title: title.NOT_FRIENDS,
             users: data.users
-                .filter((user) => `${user.id}` !== `${id}` && !data.isFriendsPair(user.id, id))
+                .filter((user) => `${id}` !== `${user.id}` && !data.isFriendsPair(id, user.id))
                 .slice(0, 3),
         },
         {
             title: title.POPULAR_FRIENDS,
             users: data.getSortedRatedUsers(true)
-                .filter((user) => `${user.id}` !== `${id}`)
+                .filter((user) => `${id}` !== `${user.id}`)
                 .slice(0, 3),
         },
     ];
-
+    debugger
     const wrapper = document.createElement('div');
     wrapper.classList.add('details-view');
     wrapper.innerHTML = (
