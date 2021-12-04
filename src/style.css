@@ -67,17 +67,13 @@ ul {
 .details-view {
     position: absolute;
 
-    padding: 25px;
+    padding: 0 25px;
 
     top: 0;
     left: 0;
     right: 0;
 
     background-color: white;
-}
-
-.details-view_closed {
-    display: none;
 }
 
 .details-view__user {
